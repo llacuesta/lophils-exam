@@ -89,7 +89,6 @@
 
 .modal_overlay {
     position: fixed;
-    margin: auto;
     top: 0;
     left: 0;
     right: 0;
@@ -176,6 +175,15 @@
     border: none;
     border-radius: 20px;
     background: #ECECEC;
+    cursor: pointer;
+}
+
+.modal_close:hover {
+    background: #BEBEBE;
+}
+
+.modal_close:active {
+    background: #A2A2A2;
 }
  
 h3 {

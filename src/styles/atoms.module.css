@@ -7,6 +7,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    cursor: pointer;
 }
 
 .publish {
@@ -17,6 +19,18 @@
     color: #28C3E9;
 }
 
+.publish:hover {
+    background: #28C3E9;
+    color: #FFFFFF;
+}
+
+.publish:active {
+    border-radius: 6px;
+    border: 1px solid #28C3E9;
+    background: #219DBC;
+    color: #FFFFFF;
+}
+
 .delete {
     border-radius: 6px;
     border: 1px solid #F24343;
@@ -25,12 +39,36 @@
     color: #F24343;
 }
 
+.delete:hover {
+    background: #F24343;
+    color: #FFFFFF;
+}
+
+.delete:active {
+    border-radius: 6px;
+    border: 1px solid #F24343;
+    background: #B53232;
+    color: #FFFFFF;
+}
+
 .tag {
     border-radius: 6px;
     border: 1px solid #50B575;
     background: #EAFAF5;
 
     color: #50B575;
+}
+
+.tag:hover {
+    background: #50B575;
+    color: #FFFFFF;
+}
+
+.tag:active {
+    border-radius: 6px;
+    border: 1px solid #50B575;
+    background: #3D8A59;
+    color: #FFFFFF;
 }
 
 .search {
@@ -77,6 +115,8 @@ p {
     font-size: 17px;
     border: none;
     background-color: #F3F3F6;
+
+    cursor: pointer;
 }
 
 .read_full > p {
@@ -86,4 +126,13 @@ p {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.read_full:hover {
+    text-decoration: underline;
+}
+
+.read_full:active {
+    text-decoration: underline;
+    color: #3268BE;
 }
