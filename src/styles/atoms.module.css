@@ -37,7 +37,7 @@
 }
 
 .search {
-    width: 200px;
+    width: 250px;
     height: 30px;
     padding: 5px 10px;
     align-items: center;
@@ -52,5 +52,23 @@
     font-family: DM Sans;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;
+}
+
+.author, .date {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #12B980;
+    font-size: 17px;
+}
+
+p {
+    color: #5F5F5F;
+    font-size: 14px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
     line-height: normal;
 }

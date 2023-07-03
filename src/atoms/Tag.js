@@ -1,9 +1,9 @@
 import style from '../styles/atoms.module.css'
 
-function Tag(props) {
+function Tag({ tag }) {
     return (
         <div className={`${style.button} ${style.tag}`}>
-            {`#${props.tag}`}
+            {`#${tag}`}
         </div>
     );
 }
