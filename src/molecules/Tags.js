@@ -1,4 +1,4 @@
-import Tag from '../atoms/Tag.js'
+import Tag from '../atoms/Tag'
 import style from '../styles/molecules.module.css'
 
 function Tags({ tags }) {
