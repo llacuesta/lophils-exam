@@ -25,7 +25,12 @@ function Article({ title, author, date, content, tags }) {
                     </div>
                     <div className={style.article_news_desc}>
                         <p>{content.substring(0,80) + "..."}</p>
-                        <ReadFull />
+                        <ReadFull 
+                            title = {title}
+                            author = {author}
+                            date = {date}
+                            content = {content}
+                        />
                     </div>
                 </div>
                 <Tags tags={tags} />
