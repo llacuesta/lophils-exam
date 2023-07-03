@@ -1,9 +1,6 @@
 .button {
     display: inline-block;
     padding: 5px 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
 
     font-size: 14px;
     font-family: DM Sans;
@@ -45,7 +42,7 @@
 
     border-style: none;
     border-radius: 3px;
-    background: #FFF;
+    background: #FFFFFF;
     box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20);
 
     font-size: 14px;
@@ -70,5 +67,25 @@ p {
     font-family: DM Sans;
     font-style: normal;
     font-weight: 700;
+    line-height: normal;
+}
+
+.read_full {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #3F84F6;
+    font-size: 17px;
+    border: none;
+    background-color: #F3F3F6;
+}
+
+.read_full > p {
+    color: #3F84F6;
+    font-size: 14px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 400;
     line-height: normal;
 }

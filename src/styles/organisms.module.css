@@ -79,24 +79,6 @@
     line-height: normal;
 }
 
-.article_read_full {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
-    color: #3F84F6;
-    font-size: 17px;
-}
-
-.article_read_full > p {
-    color: #3F84F6;
-    font-size: 14px;
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
 .article_list {
     display: flex;
     padding: 20px;

@@ -1,9 +1,9 @@
 import style from '../styles/organisms.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripVertical } from '@fortawesome/free-solid-svg-icons'
-import { faEye } from '@fortawesome/free-solid-svg-icons'
 import Author from '../atoms/Author';
 import Date from '../atoms/Date';
+import ReadFull from '../atoms/ReadFull';
 import Tags from '../molecules/Tags';
 
 function Article({ title, author, date, content, tags }) {
@@ -25,10 +25,7 @@ function Article({ title, author, date, content, tags }) {
                     </div>
                     <div className={style.article_news_desc}>
                         <p>{content.substring(0,80) + "..."}</p>
-                        <div className={style.article_read_full}>
-                            <FontAwesomeIcon icon={faEye} />
-                            <p>Read Full</p>
-                        </div>
+                        <ReadFull />
                     </div>
                 </div>
                 <Tags tags={tags} />
