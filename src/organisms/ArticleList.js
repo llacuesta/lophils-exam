@@ -5,7 +5,8 @@ import Search from '../atoms/Search';
 import style from '../styles/organisms.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripVertical } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import ReactPaginate from 'react-paginate';
 
 function ArticleList({ articles }) {
     const [state, setState] = useState(
@@ -14,6 +15,11 @@ function ArticleList({ articles }) {
         ))
     )
     const [parentState, setParentState] = useState(false)
+    // React Paginate
+    const [currentItems, setCurrentItems] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [itemOffset, setItemOffset] = useState(0);
+    const itemsPerPage = 6;
 
     const handleChange = e => {
         const newState = state.map(item => (
@@ -43,7 +49,16 @@ function ArticleList({ articles }) {
         
         setState(newState)
     }
+    const handlePageClick = (event) => {
+        const newOffset = (event.selected * itemsPerPage) % state.length;
+        setItemOffset(newOffset);
+    };
 
+    useEffect(() => {
+        const endOffset = itemOffset + itemsPerPage;
+        setCurrentItems(state.slice(itemOffset, endOffset));
+        setPageCount(Math.ceil(state.length / itemsPerPage));
+    }, [itemOffset, itemsPerPage, state])
 
     return (
         <>
@@ -60,7 +75,7 @@ function ArticleList({ articles }) {
             </div>
             <div className={style.article_list}>
                 {
-                    state.map((e, index) => (
+                    currentItems.map((e, index) => (
                         <div className={style.article} key={index}> 
                             <div className={style.article_buttons}>
                                 <FontAwesomeIcon icon={faGripVertical} />
@@ -77,6 +92,15 @@ function ArticleList({ articles }) {
                     ))
                 }
             </div>
+            <ReactPaginate
+                breakLabel="..."
+                nextLabel="next >"
+                onPageChange={handlePageClick}
+                pageRangeDisplayed={2}
+                pageCount={pageCount}
+                previousLabel="< previous"
+                renderOnZeroPageCount={null}
+            />
         </>
     );
 }
