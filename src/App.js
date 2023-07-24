@@ -17,7 +17,7 @@ function App({ signOut }) {
   return (
     <View className="App">
       <Card>
-        <Heading level={1}>We now have Auth!</Heading>
+        <Heading level={1}>Auth enabled. Yippee!</Heading>
       </Card>
       {/* <Dashboard articles={ARTICLES} /> */}
       <Button onClick={signOut}>Sign Out</Button>
