@@ -5,10 +5,7 @@ import Dashboard from './pages/Dashboard';
 import "@aws-amplify/ui-react/styles.css";
 import {
   withAuthenticator,
-  Button,
-  Heading,
   View,
-  Card,
 } from "@aws-amplify/ui-react";
 
 const ARTICLES = mock_data;
@@ -16,11 +13,7 @@ const ARTICLES = mock_data;
 function App({ signOut }) {
   return (
     <View className="App">
-      <Card>
-        <Heading level={1}>Auth enabled. Yippee!</Heading>
-      </Card>
-      {/* <Dashboard articles={ARTICLES} /> */}
-      <Button onClick={signOut}>Sign Out</Button>
+      <Dashboard articles={ARTICLES} onClick={signOut} />
     </View>
   );
 }

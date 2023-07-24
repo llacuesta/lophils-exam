@@ -1,9 +1,9 @@
 import ArticleList from '../organisms/ArticleList';
 
-function Dashboard({ articles }) {
+function Dashboard({ articles, onClick }) {
     return (
         <div>
-            <ArticleList articles={articles}/>
+            <ArticleList articles={articles} onClick={onClick} />
         </div>
     );
 }

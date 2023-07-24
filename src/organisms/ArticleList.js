@@ -7,8 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripVertical } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
+import {
+    Button    
+} from "@aws-amplify/ui-react";
 
-function ArticleList({ articles }) {
+function ArticleList({ articles, onClick }) {
     const [state, setState] = useState(
         articles.map((article, index) => (
             { id: index, article: article, checked: false }
@@ -71,6 +74,7 @@ function ArticleList({ articles }) {
                         <Delete onChange={handleDelete} />
                     </div>
                     <Search />
+                    <Button onClick={onClick}>Sign Out</Button>
                 </div>
             </div>
             <div className={style.article_list}>
