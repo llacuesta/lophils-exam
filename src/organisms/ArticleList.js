@@ -73,8 +73,10 @@ function ArticleList({ articles, onClick }) {
                         <Publish />
                         <Delete onChange={handleDelete} />
                     </div>
-                    <Search />
-                    <Button onClick={onClick}>Sign Out</Button>
+                    <div className={style.header_buttons}>
+                        <Search />
+                        <Button onClick={onClick}>Sign Out</Button>
+                    </div>
                 </div>
             </div>
             <div className={style.article_list}>
